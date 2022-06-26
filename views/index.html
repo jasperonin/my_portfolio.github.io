@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--BOOTSTRAP 5 CSS-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../assets/style.css">
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <title>Portfolio</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('9kiIxVjUeNtHF0XsQ');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                //this.contact_number.value = Math.random() * 100000 | 0;
+                this.user_name.value;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_d6tenp8', 'template_l9gu8pd', this, '9kiIxVjUeNtHF0XsQ')
+                    .then(function() {
+                        alert('Email Sent Successfully!');
+                        document.getElementById('floatingTextarea2').value='';
+                        document.getElementById('user_name').value='';
+                        document.getElementById('user_email').value='';
+                        document.getElementById('phone').value='';
+
+                     
+                    }, function(error) {
+                        alert('Something went wrong! Try again.');
+
+                    });
+            });
+        }
+    </script>
+</head>
+<body id="page-top">
+
+    <!-- Nav Links -->
+
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a href="#page-top" class="navbar-brand">my portfolio</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                MENU
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#projects">Projects</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#experience">experience</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">contact</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- header -->
+
+    <header class="masthead text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                <img class="masthead-avatar mb-5 img-thumbnail" src="../assets/img/411A2191.jpg" alt="..." />
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0" style="font-family: 'Lato',sans-serif;">leo albit</h1>
+                <!-- Icon Divider-->
+                <div class="mt-2">
+                    <span class="fs-2" style="font-family:'Courier New', Courier, monospace;">I'm a </span> <span class="lead fs-2 auto-type" style="font-family:'Courier New', Courier, monospace;  color: rgba(199, 75, 18, 0.819);"></span>
+                </div>
+                <!-- Social Link -->
+                <div class="row">
+                    <div class="col-3">
+                        <a href="https://www.facebook.com/tooezforonin07" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook text-dark" style="height: 5rem;"></i></a>
+                    </div>
+                    <div class="col-3">
+                        <a href="https://github.com/jasperonin" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github text-dark" style="height: 5rem;"></i></a>
+                    </div>
+                    <div class="col-3">
+                        <a href="https://www.linkedin.com/in/leo-albit-77a71a189/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin text-dark" style="height: 5rem;"></i></a>
+                    </div>
+                    <div class="col-3">
+                        <a href="mailto:snzleo@gmail.com"><i class="fa-solid fa-at text-dark" style="height: 5rem;"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+    </header>
+    
+    <!-- PROJECTS -->
+
+    <section class="page-section portfolio" id="projects">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-4">projects</h2>
+            <div class="row ms-auto">
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="card bg-info" style="width: 18rem;">
+                        <img src="../assets/img/R.png" class="card-img-top" alt="...">
+                        <div class="card-header"><h5>Time Tracker App</h5> </div>
+                            <div class="card-body">  
+                            <p class="card-text">A simple web application that tracks user's activity. </p>
+                            <a href="https://github.com/jasperonin" class="btn btn-warning">Visit Github Repository</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="card bg-info h-100" style="width: 18rem;">
+                        <img src="../assets/img/IdentityTheft_SizeMed.jpg" class="card-img-top" alt="...">
+                        <div class="card-header"><h5>Jasperskey</h5> </div>
+                            <div class="card-body">  
+                            <p class="card-text">A light weight network scanner. This allows the user to scan the entire network by just clicking a button.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://github.com/jasperonin" class="btn btn-warning">Visit Github Repository</a>              
+                            </div>
+                        </div>
+                    </div>
+              
+                <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                    <div class="card bg-info" style="width: 18rem;">
+                        <img src="../assets/img/icon-api-24.jpg" class="card-img-top" alt="...">
+                        <div class="card-header"><h5>REST Api</h5> </div>
+                            <div class="card-body">  
+                            <p class="card-text">A simple recipe RESTful API that has basic CRUD operation. </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://github.com/jasperonin" class="btn btn-warning">Visit Github Repository</a>              
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- ABOUT -->
+    <section class="page-section bg-success text-white mb-0" id="about">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white mb-3">About</h2>
+            <!-- About Section Content-->
+            <div class="row">
+                <div class="col-lg-6 ms-auto"><p class="lead">I'm very passionate when it comes to technology. Thus, self improvement is very important to keep myself up-to-date with the current tech trend. </p></div>
+                <div class="col-lg-6 ms-auto text-center"><p class="lead">Insterested to talk? Feel free to download my résumé below.</p>
+                    <a href="../assets/pdf/Resume - Leo Albit.pdf" download  class="text-white">
+                        <i class="fa-solid fa-file-pdf" style="height:3rem;"></i>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!--EXPERIENCE-->
+
+    <section class="page-section bg-dark text-white mb-0" id="experience">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white mb-4">Experience</h2>
+            <!-- About Section Content-->
+            <div class="row">
+                <div class="col-lg-2 ms-auto "><p class="lead">Quality Assurance <strong>Convergys </strong></p><p>Oct 2012 - Nov 2015</p></div>
+                <div class="col-lg-10 ms-auto"><p class="lead">My role is to audit calls, provide feedback and do coaching. This is to ensure that the team member can provide top quality service.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-2 ms-auto"><p class="lead">Web Developer <strong>Freelance</strong></p> <p>April 2014 - May 2020</p></div>
+                <div class="col-lg-10 ms-auto"><p class="lead">Designed and created user-friendly websites for our clients.
+                    Established an interactive website to guarantee traffic. I also optimize website</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-2 ms-auto"><p class="lead">Incident Coordinator <strong>PicnicHealth</strong></p> <p>May 2020 - Current</p></div>
+                <div class="col-lg-10 ms-auto"><p class="lead">Designed and created user-friendly websites for our clients.
+                    Established an interactive website to guarantee traffic. I also optimize website</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-2 ms-auto"><p class="lead">Developer Instructor <strong>Kredo</strong></p> <p> May 24- Current</p></div>
+                <div class="col-lg-10 ms-auto"><p class="lead">Part time web development instructor. My role is to provide support towards aspiring web artisan by guiding them step by step. Current tech stack: PHP native, PHP OOP, JavaScript, HTML 5, CSS 3, Bootstrap 5 and MySQL.</p>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    <section class="page-section mb-0" id="contact">
+        <div class="container">
+            <!-- About Section Heading-->
+            <div class="card w-50 mx-auto">
+                <div class="card-header text-center fs-1 text-center text-uppercase fw-bolder">
+                     Contact Me
+                </div>
+                <div class="card-body">
+                    <form id="contact-form" method="post" >
+                        <input type="hidden" name="contact_number">
+                        <label for="fname">Full name</label>
+                        <input type="text" name="user_name" id="user_name" class="form-control mb-3 form-control-lg" required autofocus placeholder="Type here..">
+                        <label for="email">Email address</label>
+                        <input type="email" name="user_email" id="user_email" class="form-control mb-3 form-control-lg" required autofocus placeholder="Type here..">
+                        <label for="phone">Phone number</label>
+                        <input type="text" name="phone" id="phone" class="form-control mb-3 form-control-lg" maxlength="12" required autofocus placeholder="Phone number">
+                        <div class="form-floating">
+                            <textarea class="form-control" name="message" required placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Message</label>
+                        </div>
+                        <input type="submit" class="btn btn-outline-success w-100 mt-3" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+
+<!-- EXTERNAL JS -->
+
+
+<!-- JS BUNDLE  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<!-- AUTO TYPE -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+    const typed = new Typed(".auto-type",{
+    strings:["Developer", "Game Creator", "Computer Technician","Freelancer"],
+    typeSpeed: 100,
+    backSpeed: 150,
+    smartBackspace: false,
+    loop: true
+})
+</script>
+<script src="../assets/script.js"></script>
+</body>
+</html>
