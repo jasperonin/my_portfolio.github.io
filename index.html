@@ -23,7 +23,8 @@
     </script>
     <script type="text/javascript">
         window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
+    
+            document.getElementById('contact-form','page-top').addEventListener('submit', function(event) {
                 event.preventDefault();
                 // generate a five digit number for the contact_number variable
                 //this.contact_number.value = Math.random() * 100000 | 0;
@@ -214,11 +215,11 @@
                     <form id="contact-form" method="post" >
                         <input type="hidden" name="contact_number">
                         <label for="fname">Full name</label>
-                        <input type="text" name="user_name" id="user_name" class="form-control mb-3 form-control-lg" required autofocus placeholder="Type here..">
+                        <input type="text" name="user_name" id="user_name" class="form-control mb-3 form-control-lg" required  placeholder="Type here..">
                         <label for="email">Email address</label>
-                        <input type="email" name="user_email" id="user_email" class="form-control mb-3 form-control-lg" required autofocus placeholder="Type here..">
+                        <input type="email" name="user_email" id="user_email" class="form-control mb-3 form-control-lg" required  placeholder="Type here..">
                         <label for="phone">Phone number</label>
-                        <input type="text" name="phone" id="phone" class="form-control mb-3 form-control-lg" maxlength="12" required autofocus placeholder="Phone number">
+                        <input type="text" name="phone" id="phone" class="form-control mb-3 form-control-lg" maxlength="12" required  placeholder="Phone number">
                         <div class="form-floating">
                             <textarea class="form-control" name="message" required placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
                             <label for="floatingTextarea2">Message</label>
